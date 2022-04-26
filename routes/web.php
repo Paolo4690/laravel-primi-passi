@@ -15,7 +15,29 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $params = [
-        'title' => 'Hello Word!'
+        'title' => 'Hello Word!',
+        'links' => [
+            [
+                'url' => '/',
+                'title' => 'Home'
+            ],
+            [
+                'url' => '/contatti',
+                'title' => 'contatti'
+            ],
+            [
+                'url' => '/prodotti',
+                'title' => 'prodotti'
+            ],
+            [
+                'url' => '/negozio',
+                'title' => 'negozio'
+            ],
+            [
+                'url' => '/documenti',
+                'title' => 'documenti'
+            ]
+        ],
     ];
     return view('home', $params);
 })->name('home');

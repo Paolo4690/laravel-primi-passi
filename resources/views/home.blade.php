@@ -71,11 +71,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('home') }}">Home</a>
-                    <a href="{{ route('contatti') }}">Contatti</a>
-                    <a href="{{ route('prodotti') }}">Prodotti</a>
-                    <a href="{{ route('negozio') }}">Negozio</a>
-                    <a href="{{ route('documenti') }}">Documenti</a>
+                    @foreach ($links as $link)
+                        <a href="{{ $link['url'] }}">{{ $link['title'] }}</a>
+                    @endforeach
                 </div>
             </div>
         </div>
